@@ -1,15 +1,17 @@
 import React from "react";
 import { COLORS } from "@/constants/colors";
-import { Box, Divider, Typography } from "@mui/material";
 import { NAVLINKS } from "@/constants/navLinks";
+import { Box, Divider, Typography } from "@mui/material";
 import { useLocation, useNavigate } from "react-router-dom";
 
 const Sidebar = () => {
   const navigate = useNavigate();
   const { pathname } = useLocation();
+
+  const height = window.innerHeight;
   return (
     <>
-      <Box bgcolor={COLORS.white.offWhite} height={800}>
+      <Box height={height} bgcolor={COLORS.white.offWhite}>
         <Box display="flex" justifyContent="center" alignItems="center" gap={1}>
           <Box height={72} width={50}>
             <img
@@ -35,12 +37,7 @@ const Sidebar = () => {
               bgcolor={item.url === pathname ? "#923D8C" : ""}
             >
               <Box height={36} width={36} alignItems={"center"}>
-                <img
-                  alt="logo"
-                  width="80%"
-                  height="80%"
-                  src={item?.icon}
-                />
+                <img alt="logo" width="80%" height="80%" src={item?.icon} />
               </Box>
               <Typography width={130}>{item.title}</Typography>
             </Box>
