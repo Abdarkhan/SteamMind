@@ -8,6 +8,5 @@ export const NAVLINKS = [
     title: "Manage Users",
     url: "/users",
     icon: "/assets/icons/manageusers.svg",
-
   },
 ];

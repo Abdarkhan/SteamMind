@@ -12,7 +12,7 @@ import {
 import { styled, alpha } from "@mui/material/styles";
 import SearchIcon from "@mui/icons-material/Search";
 import NotificationsIcon from "@mui/icons-material/Notifications";
-import { MenuOpenOutlined } from "@mui/icons-material";
+import { Close, MenuOpenOutlined } from "@mui/icons-material";
 
 const Search = styled("div")(({ theme }) => ({
   position: "relative",
@@ -46,7 +46,9 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
   },
 }));
 
-const Header = () => {
+const Header = (props) => {
+  const { onToggle, toggle } = props;
+
   return (
     <AppBar
       position="static"
@@ -97,8 +99,9 @@ const Header = () => {
           <Box
             component={IconButton}
             sx={{ display: { xs: "block", sm: "none" } }}
+            onClick={() => onToggle(toggle ? false : true)}
           >
-            <MenuOpenOutlined color="error" />
+            {toggle ? <Close /> : <MenuOpenOutlined color="error" />}
           </Box>
         </Box>
       </Toolbar>
