@@ -13,7 +13,8 @@
       "@store/*": ["src/store/*"],
       "@core/*": ["src/core/*"],
       "@constants/*": ["src/contants/*"],
-      "@layouts/*": ["src/layouts/*"]
+      "@layouts/*": ["src/layouts/*"],
+      "@containers/*": ["src/containers/*"]
     }
   }
 }
