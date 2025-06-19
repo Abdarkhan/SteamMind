@@ -1,12 +1,13 @@
-import AppLayout from '@/layout/AppLayout'
-import React from 'react'
+import React from "react";
+import AppLayout from "@/layout/AppLayout";
+import ManageDashboardContainer from "@/containers/ManageDashboard";
 
 const Dashboard = () => {
   return (
     <AppLayout>
-        Dashboard
+      <ManageDashboardContainer />
     </AppLayout>
-  )
-}
+  );
+};
 
-export default Dashboard
+export default Dashboard;

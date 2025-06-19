@@ -1,10 +1,13 @@
-import React from 'react'
-import AppLayout from '@/layout/AppLayout'
+import React from "react";
+import AppLayout from "@/layout/AppLayout";
+import ManageUserContainer from "@/containers/ManageUsers";
 
 const ManageUsers = () => {
   return (
-    <AppLayout>ManageUsers</AppLayout>
-  )
-}
+    <AppLayout>
+      <ManageUserContainer />
+    </AppLayout>
+  );
+};
 
-export default ManageUsers
+export default ManageUsers;
