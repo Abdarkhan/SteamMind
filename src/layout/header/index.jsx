@@ -1,8 +1,18 @@
 import React from "react";
-import { AppBar, Toolbar, Typography, InputBase, Box, Avatar, Badge, IconButton } from "@mui/material";
+import {
+  AppBar,
+  Toolbar,
+  Typography,
+  InputBase,
+  Box,
+  Avatar,
+  Badge,
+  IconButton,
+} from "@mui/material";
 import { styled, alpha } from "@mui/material/styles";
 import SearchIcon from "@mui/icons-material/Search";
 import NotificationsIcon from "@mui/icons-material/Notifications";
+import { MenuOpenOutlined } from "@mui/icons-material";
 
 const Search = styled("div")(({ theme }) => ({
   position: "relative",
@@ -38,16 +48,32 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
 
 const Header = () => {
   return (
-    <AppBar position="static" color="transparent" elevation={0} style={{ boxShadow: "1px 0px 0px 1px #ccc" }}>
+    <AppBar
+      position="static"
+      color="transparent"
+      elevation={0}
+      style={{ boxShadow: "1px 0px 0px 1px #ccc" }}
+    >
       <Toolbar sx={{ justifyContent: "space-between" }}>
         {/* Left - Title */}
-        <Typography variant="subtitle1" fontWeight="bold" color="text.primary">
+        <Typography
+          fontWeight="bold"
+          color="text.primary"
+          fontSize={{ md: 15, sm: 14, xs: 12 }}
+        >
           Admin Dashboard
         </Typography>
 
         {/* Middle - Search */}
-        <Search>
-          <StyledInputBase placeholder="Search here" inputProps={{ "aria-label": "search" }} />
+        <Search
+          sx={{
+            display: { xs: "none", sm: "flex" },
+          }}
+        >
+          <StyledInputBase
+            placeholder="Search here"
+            inputProps={{ "aria-label": "search" }}
+          />
           <SearchIconWrapper>
             <SearchIcon />
           </SearchIconWrapper>
@@ -61,9 +87,19 @@ const Header = () => {
             </Badge>
           </IconButton>
           <Avatar alt="Alexander Wright" src="https://i.pravatar.cc/300" />
-          <Typography variant="body2" color="text.primary">
+          <Typography
+            color="text.primary"
+            display={{ xs: "none", sm: "block" }}
+            fontSize={{ md: 15, sm: 12, xs: 12 }}
+          >
             Alexander Wright
           </Typography>
+          <Box
+            component={IconButton}
+            sx={{ display: { xs: "block", sm: "none" } }}
+          >
+            <MenuOpenOutlined color="error" />
+          </Box>
         </Box>
       </Toolbar>
     </AppBar>
