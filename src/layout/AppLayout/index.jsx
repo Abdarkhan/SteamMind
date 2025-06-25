@@ -22,7 +22,7 @@ const AppLayout = ({ children }) => {
             <Sidebar />
           </Box>
         </Grid>
-        <Grid size={{ md: 2, sm: 3 }} display={{ xs: "block", md: "none" }}>
+        <Grid size={{ md: 2, sm: 3 }} display={{ xs: "block", sm:'block', md: "none" }}>
           {toggle && (
             <Box>
               <MobileHeader onToggle={onToggle} />

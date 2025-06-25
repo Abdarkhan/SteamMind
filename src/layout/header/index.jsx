@@ -61,7 +61,7 @@ const Header = (props) => {
         <Typography
           fontWeight="bold"
           color="text.primary"
-          fontSize={{ md: 15, sm: 14, xs: 12 }}
+          fontSize={{ xs: 12, sm: 12, md: 15, }}
         >
           Admin Dashboard
         </Typography>
@@ -88,17 +88,18 @@ const Header = (props) => {
               <NotificationsIcon />
             </Badge>
           </IconButton>
-          <Avatar alt="Alexander Wright" src="https://i.pravatar.cc/300" />
+          <Avatar alt="AB">AB</Avatar>
+          {/* <Avatar alt="Alexander Wright" src="https://i.pravatar.cc/300" /> */}
           <Typography
             color="text.primary"
-            display={{ xs: "none", sm: "block" }}
+            display={{ xs: "none", sm: "none"}}
             fontSize={{ md: 15, sm: 12, xs: 12 }}
           >
             Alexander Wright
           </Typography>
           <Box
             component={IconButton}
-            sx={{ display: { xs: "block", sm: "none" } }}
+            sx={{ display: { xs: "block", sm: "block" } }}
             onClick={() => onToggle(toggle ? false : true)}
           >
             {toggle ? <Close /> : <MenuOpenOutlined color="error" />}

@@ -34,7 +34,7 @@ const Sidebar = () => {
               alignItems="center"
               justifyContent="center"
               onClick={() => navigate(item?.url)}
-              bgcolor={item.url === pathname ? "#923D8C" : ""}
+              bgcolor={item.url === pathname ? COLORS.pruple : ""}
             >
               <Box height={36} width={36} alignItems={"center"}>
                 <img alt="logo" width="80%" height="80%" src={item?.icon} />
