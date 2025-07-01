@@ -1,3 +1,5 @@
+// CustomTable.jsx
+
 import React from "react";
 import {
   Box,
@@ -14,18 +16,15 @@ import {
 } from "@mui/material";
 import { useTheme } from "@mui/material/styles";
 
-
-
 const CustomTable = ({ headers, rows }) => {
   const theme = useTheme();
   const isSmallScreen = useMediaQuery(theme.breakpoints.down("sm"));
 
-  // For handling "Select All"
   const [selected, setSelected] = React.useState([]);
 
   const handleSelectAll = (e) => {
     if (e.target.checked) {
-      setSelected(rows.map((row, i) => i));
+      setSelected(rows.map((_, i) => i));
     } else {
       setSelected([]);
     }
@@ -47,13 +46,13 @@ const CustomTable = ({ headers, rows }) => {
             <TableRow>
               {headers.map((header, index) => (
                 <TableCell key={index}>
-                  {header.toLowerCase() === "select all" ? (
+                  {header.key === "select" ? (
                     <Checkbox
                       checked={selected.length === rows.length}
                       onChange={handleSelectAll}
                     />
                   ) : (
-                    <Typography fontWeight="bold">{header}</Typography>
+                    <Typography fontWeight="bold">{header.label}</Typography>
                   )}
                 </TableCell>
               ))}
@@ -65,13 +64,13 @@ const CustomTable = ({ headers, rows }) => {
               <TableRow key={rowIndex} hover>
                 {headers.map((header, colIndex) => (
                   <TableCell key={colIndex}>
-                    {header.toLowerCase() === "select all" ? (
+                    {header.key === "select" ? (
                       <Checkbox
                         checked={selected.includes(rowIndex)}
                         onChange={() => handleSelectOne(rowIndex)}
                       />
                     ) : (
-                      row[header.toLowerCase()]
+                      row[header.key] ?? "-"
                     )}
                   </TableCell>
                 ))}

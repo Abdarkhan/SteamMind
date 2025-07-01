@@ -5,10 +5,12 @@ export const COLORS = {
     light: "",
   },
   white:{
-    offWhite:"#F5F5F5"
+    offWhite:"#F5F5F5",
+    Black:"red",
+    Lightyellow:"beige"
   },
   grey:{
-    main:"grey",
+    main:"#E8E8E8",
     light:"",
     dark:"",
     input:""

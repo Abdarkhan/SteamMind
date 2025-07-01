@@ -25,7 +25,9 @@ const ManageUserContainer = () => {
       </div> */}
       <Hero title="User Management" />
       <CustomTabs options={tabs} isChild />
-      <CustomTable headers={INS_HEADER} rows={INS_ROWS} />
+      {/* <CustomTable headers={INS_HEADER} rows={INS_ROWS} /> */}
+
+      
       {/* <CustomTabs options={tabs1} width='100%' /> */}
       {/* <CustomTabs options={Subtabs} width="60%" /> */}
     </>

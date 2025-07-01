@@ -23,7 +23,7 @@ export const CustomTabs = ({ options, width, background, isChild}) => {
         indicatorColor="secondary"
         aria-label="secondary tabs example"
         sx={{
-          width: width || "50%",
+          width: width || "40%",
           height: 15,
           "& .MuiTabs-list": {
             bgcolor: background || COLORS.white.offWhite,

@@ -1,6 +1,8 @@
 import React from "react";
 import CustomTabs from "@/components/CustomTabs";
 import { Box } from "@mui/material";
+import CustomTable from "@/components/CustomTable";
+import { INS_HEADER, INS_ROWS } from "@/constants/contents";
 
 const Instructor = () => {
   const Subtabs = [
@@ -13,10 +15,10 @@ const Instructor = () => {
 
   return (
     <div>
-        <Box my={3}>
-
-      <CustomTabs options={Subtabs} width="70%" />
-        </Box>
+      <Box my={3}>
+        <CustomTabs options={Subtabs} width="70%" />
+        <CustomTable headers={INS_HEADER} rows={INS_ROWS} />
+      </Box>
     </div>
   );
 };
