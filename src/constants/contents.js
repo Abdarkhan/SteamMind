@@ -132,3 +132,66 @@ export const ACCESS_ROLE_ROWS = [
     action: "...",
   },
 ];
+
+export const COURSEARRAYDATA = [
+  {
+    title: "Web Development Master Class",
+    isActive: "",
+    subTitle: "Full Stack",
+  },
+  {
+    title: "Web Development Master Class",
+    isActive: "",
+    subTitle: "Full Stack",
+  },
+  {
+    title: "Web Development Master Class",
+    isActive: "",
+    subTitle: "Full Stack",
+  },
+  {
+    title: "Web Development Master Class",
+    isActive: "",
+    subTitle: "Full Stack",
+  },
+  {
+    title: "Web Development Master Class",
+    isActive: "",
+    subTitle: "Full Stack",
+  },
+  {
+    title: "Web Development Master Class",
+    isActive: "",
+    subTitle: "Full Stack",
+  },
+  {
+    title: "Web Development Master Class",
+    isActive: "",
+    subTitle: "Full Stack",
+  },
+  {
+    title: "Web Development Master Class",
+    isActive: "",
+    subTitle: "Full Stack",
+  },
+  {
+    title: "Web Development Master Class",
+    isActive: "",
+    subTitle: "Full Stack",
+  },
+  {
+    title: "Web Development Master Class",
+    isActive: "",
+    subTitle: "Full Stack",
+  },
+  {
+    title: "Web Development Master Class",
+    isActive: "",
+    subTitle: "Full Stack",
+  },
+  {
+    title: "Web Development Master Class",
+    isActive: "",
+    subTitle: "Full Stack",
+  },
+];

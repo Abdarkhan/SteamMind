@@ -1,3 +1,5 @@
+import { red } from "@mui/material/colors";
+
 export const COLORS = {
   primary: {
     main: "",
@@ -15,5 +17,7 @@ export const COLORS = {
     dark:"",
     input:""
   },
-  pruple:"#923D8C"
+  pruple:"#923D8C",
+  red: red[500],
+  white: "#ffffff",
 };

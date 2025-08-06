@@ -33,7 +33,7 @@ const AppLayout = ({ children }) => {
           <Box height={100}>
             <Header onToggle={onToggle} toggle={toggle} />
           </Box>
-          <Box px={4}>{children}</Box>
+          <Box px={{xs:1,md:4}}>{children}</Box>
         </Grid>
       </Grid>
     </>

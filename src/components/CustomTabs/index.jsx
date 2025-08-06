@@ -14,24 +14,30 @@ export const CustomTabs = ({ options, width, background, isChild }) => {
   const height = "15px";
 
   return (
-    <Box sx={{ width: width || "65%" }}>
+    <Box sx={{ width: "100%", overflowX: "auto",  }}>
       <Tabs
         value={value}
         onChange={handleChange}
+        variant="scrollable" // Makes tabs scrollable on smaller screens
+        scrollButtons="auto"
         textColor="secondary"
         indicatorColor="secondary"
-        aria-label="secondary tabs example"
+        aria-label="custom responsive tabs"
         sx={{
-          height: 15,
-          overflowX: "auto", // Enables horizontal scrolling if the tabs overflow
-          "& .MuiTabs-list": {
-            bgcolor: background || COLORS.white.offWhite,
-            color: "black",
-            whiteSpace: "nowrap", // Prevents the tabs from wrapping to the next line
-            "& .Mui-selected": {
-              background: COLORS.pruple,
-              color: "white",
-            },
+          maxWidth: { xs: "100%", sm: width || "80%", md: width || "40%" },
+          bgcolor: background || COLORS.white.offWhite,
+          "& .MuiTabs-flexContainer": {
+            whiteSpace: "nowrap",
+          },
+          "& .MuiTab-root": {
+            fontSize: { xs: "12px", sm: "14px" },
+            minWidth: "auto",
+            padding: { xs: "6px 12px", sm: "8px 16px" },
+            flexShrink: 0, // Prevents shrinking
+          },
+          "& .Mui-selected": {
+             color: "white !important",
+            background: COLORS.pruple,
           },
         }}
       >
@@ -39,7 +45,7 @@ export const CustomTabs = ({ options, width, background, isChild }) => {
           <Tab value={item.value} label={item.label} key={item.value} />
         ))}
       </Tabs>
-      <Box>{isChild && options[value]?.children}</Box>
+      <Box >{isChild && options[value]?.children}</Box>
     </Box>
   );
 };

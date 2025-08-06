@@ -9,4 +9,9 @@ export const NAVLINKS = [
     url: "/users",
     icon: "/assets/icons/manageusers.svg",
   },
+    {
+    title: "Manage Courses",
+    url: "/courses",
+    icon: "/assets/icons/manageusers.svg",
+  },
 ];
