@@ -8,6 +8,9 @@ import {
   Chip,
   Grid,
   Box,
+  IconButton,
+  Menu,
+  MenuItem,
 } from "@mui/material";
 import StarIcon from "@mui/icons-material/Star";
 import EditIcon from "@mui/icons-material/Edit";
@@ -97,9 +100,15 @@ const CourseCard = ({ item, onEdit }) => {
               $89.99
             </Typography>
             <Grid justifyContent={"space-around"}>
-              <DeleteIcon onClick={handleDeleteClick} />
-              <BorderColorIcon onClick={onEdit} />
-              <MoreVertIcon />
+              <IconButton onClick={handleDeleteClick}>
+                <DeleteIcon />
+              </IconButton>
+              <IconButton onClick={onEdit}>
+                <BorderColorIcon />
+              </IconButton>
+              <IconButton>
+                <MoreVertIcon />
+              </IconButton>
             </Grid>
           </Grid>
         </CardContent>
@@ -115,6 +124,17 @@ const CourseCard = ({ item, onEdit }) => {
           Do you want to delete this Course?
         </Typography>
       </CustomModal>
+
+         {/* ✅ Popover Menu */}
+      {/* <Menu
+        // anchorEl={anchorEl}
+        open={open}
+        // onClose={handleMenuClose}
+        anchorOrigin={{ vertical: "bottom", horizontal: "right" }}
+        transformOrigin={{ vertical: "top", horizontal: "right" }}
+      >
+        <MenuItem onClick={handleViewDetails}>View Details</MenuItem>
+      </Menu> */}
     </>
   );
 };
